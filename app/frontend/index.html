@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Gesture Composition</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+    @font-face {
+        font-family: 'YZE';
+        src: url('../assets/YZE.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+    }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="main-container">
+            <div class="camera-container">
+                <div id="camera-overlay"></div>
+                <img id="camera-feed" />
+            </div>
+            <div id="canvas-container" class="canvas-container"></div>
+            <div id="finger-blob-overlay"></div>
+        </div>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html> 
