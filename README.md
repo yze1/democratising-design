@@ -1,6 +1,12 @@
 # Democratising Design
 
-A local hand-tracking composition prototype. The Python backend uses MediaPipe and OpenCV to read a webcam, detect hand landmarks, and stream gesture data plus camera frames over WebSocket. The p5.js frontend displays the camera feed and a composition canvas where image elements can be selected, moved, scaled, and rotated with hand gestures.
+Democratising Design is a local gesture-controlled composition prototype exploring whether design tools can become more accessible without removing creative control. The project combines webcam hand tracking, a browser canvas, and generated visual assets so a user can compose poster elements through movement rather than conventional design software.
+
+The wider project investigates automated and semi-automated design systems using TouchDesigner, MediaPipe, local LLM prompting, ComfyUI workflows, segmentation, ControlNet-style composition, and refinement pipelines. This repository contains the interactive composition layer: a Python backend tracks the hand, then a p5.js frontend uses that data to select, move, scale, and rotate image elements on a poster canvas.
+
+- Website: https://yze.design/democratising/
+- Process: https://yze.design/democratising/process/
+- Repository: https://github.com/yze1/democratising-design
 
 ## Requirements
 
@@ -39,9 +45,11 @@ Open `http://127.0.0.1:5500/`.
 
 Press `q` in the OpenCV debug window to stop the backend.
 
+The index finger controls position. Pinching the index finger and thumb selects an element, while the thumb-to-pinky distance and angle control scale and rotation.
+
 ## Project Structure
 
-- `app/main.py` - webcam capture, hand tracking, and WebSocket streaming.
+- `app/main.py` - webcam capture, MediaPipe hand tracking, and WebSocket streaming.
 - `app/frontend/` - p5.js interface and canvas interaction.
 - `app/assets/` - composition images and font assets.
 - `architecture.md`, `canvas-overlay.md`, `optimisation.md`, `tasks.md` - project notes.
